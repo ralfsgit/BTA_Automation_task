@@ -36,13 +36,11 @@ public class PersonalizedOfferPage extends BasePage {
     }
 
     public String getHeaderAddMoreProtectionText() {
-
         return getTextAndWaitTillElementVisible(headerAddMoreProtectionText);
     }
 
     public double getMyPolicySum(){
        String policyTotalSum = getTextAndWaitTillElementVisible(myPolicyTotalSum);
-
         return Double.parseDouble(policyTotalSum.replaceAll("[^\\d.]", ""));
     }
 

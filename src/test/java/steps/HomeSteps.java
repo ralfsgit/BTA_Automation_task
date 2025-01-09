@@ -15,9 +15,7 @@ public class HomeSteps {
     @Given("I open BTA home page")
     public void openLoginPage() {
         open("http://www.bta.lv");
-
         Assertions.assertEquals(pages.homePage.getLoginContainerName(), "Mans BTA");
-
     }
 
     @And("I click \"Accept Cookies\" Button")

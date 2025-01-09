@@ -34,7 +34,6 @@ public class TravelInsuranceSteps {
         pages.travelInsurancePage.clickApplyButton();
     }
 
-
     @Then("Travel Destination is changed to \"(.*)\"$")
     public void travelDestinationIsChangedTo(String changedDestination) {
         Assertions.assertEquals(pages.travelInsurancePage.getChangedTravelDestinationText(), changedDestination);

@@ -11,7 +11,6 @@ public class PersonalizedOfferSteps {
 
     PagesManager pages = new PagesManager();
 
-
     @When("I choose program \"(.*)\"$")
     public void iChooseProgram(String program) {
         pages.personalizedOfferPage.chooseProgram(program);

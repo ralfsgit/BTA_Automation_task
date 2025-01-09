@@ -20,10 +20,6 @@ Feature: Travel policy
     Then I am in travelers page
     And I see empty and visible data fields
 
-
-
-
-
     Examples:
       | destination  | changedDestination | activity                          | program  | sum  |
       | Indija       | Visa pasaule       | Ar paaugstināta riska aktivitātēm | Optimālā | 2000 |

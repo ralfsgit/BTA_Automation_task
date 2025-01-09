@@ -14,7 +14,6 @@ public class HomePage extends BasePage {
     private SelenideElement travelButton = $(
             By.xpath("//div[@class='list']//*[contains(text(), 'Ceļojumi')]"));
 
-
     public void clickAcceptCookiesButton() {
         clickOn(acceptCookiesButton);
     }

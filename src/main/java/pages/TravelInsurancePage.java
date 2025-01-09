@@ -23,14 +23,12 @@ public class TravelInsurancePage extends BasePage {
     public String getTravelInsuranceHeaderName() {
         return travelInsuranceHeader.getText();
     }
-
     public void clickDestinationButton() {
         clickOn(destinationSelectorButton);
     }
     public void chooseCountry() {
         clickOn(chooseCountryButton);
     }
-
     public void clickAddCountry() {
         clickOn(addCountry);
     }
@@ -46,14 +44,12 @@ public class TravelInsurancePage extends BasePage {
     public String getChangedTravelDestinationText() {
         return changedDestinationTextField.getText();
     }
-
     public void clickActivityButton() {
         clickOn(activityButton);    }
 
     public void changeActivity(String activity) {
         clickOn($(By.xpath("//div[@class='wrapper single-popup-focus']//*[contains(text(),'" + activity + "')]")));
     }
-
     public String getActivityText() {
         return getTextAndWaitTillElementVisible(activityTextField);
     }
