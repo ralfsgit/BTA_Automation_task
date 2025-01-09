@@ -20,13 +20,11 @@ public class Hooks {
         holdBrowserOpen = false;
     }
 
-
     @After(order = 2)
     public static void clearSelenideStorages() {
         clearBrowserCookies();
         clearBrowserLocalStorage();
     }
-
 
     @After(order = 3)
     public static void takeScreenShot(Scenario scenario) {
@@ -37,7 +35,6 @@ public class Hooks {
             scenario.attach(decoded, "image/png", "screenshot");
         }
     }
-
 
     @After(order = 1)
     public void tearDown() {

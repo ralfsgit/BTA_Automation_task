@@ -7,7 +7,7 @@ import pages.PagesManager;
 public class TravelersSteps {
 
     PagesManager pages = new PagesManager();
-
+    
     @Then("I am in travelers page")
     public void iAmInTravelersPage() {
         pages.travelersPage.travelPageLoaded();
