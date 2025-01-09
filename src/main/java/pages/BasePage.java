@@ -47,7 +47,7 @@ Added scrollToElement method because sometimes when element is below screen sele
 
       if (!isElementInView) {
         Selenide.executeJavaScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
-        Thread.sleep(500); // Wait for the scrolling to finish
+        Thread.sleep(500);
       }
 
       element.click();
