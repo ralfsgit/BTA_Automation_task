@@ -1,16 +1,9 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.NoSuchElementException;
 
-import java.time.Duration;
-
-import static com.codeborne.selenide.Selenide.sleep;
 import static java.time.Duration.ofSeconds;
-
 
 public class BasePage {
 
