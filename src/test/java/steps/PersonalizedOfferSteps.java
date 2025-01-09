@@ -44,6 +44,4 @@ public class PersonalizedOfferSteps {
         pages.personalizedOfferPage.clickContinueButton();
     }
 
-
-
 }
