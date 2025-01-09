@@ -1,0 +1,6 @@
+target/
+screenshots/
+target/
+.idea/
+/allure-results
+.gitattributes
