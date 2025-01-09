@@ -32,7 +32,7 @@ public class BasePage {
 
   /**
 Added scrollToElement method because sometimes when element is below screen selenide build in webdriver failed to autoscroll
-   to element causing test to fail. 
+   to element causing test to fail.
 */
   public void scrollToElement(SelenideElement element) {
     try {

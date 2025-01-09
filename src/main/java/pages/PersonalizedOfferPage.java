@@ -1,9 +1,12 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import lombok.Getter;
 import lombok.Setter;
 import org.openqa.selenium.By;
+
+import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -23,16 +26,17 @@ public class PersonalizedOfferPage extends BasePage {
     private SelenideElement carInsuranceAmountField = $(By.xpath("//div[@class='list-container']//child::*[contains(text(), 'Apdrošināšanas cena')]/child::*"));
 
 
-
     public void chooseProgram(String activity) {
-        SelenideElement priceElement = ($(By.xpath("//section[@class='policy-items']//*[contains(text(),'" + activity + "')]/following-sibling::div[@class='price']/span[@class='num']")));
-        clickOn($(By.xpath("(//section[@class='policy-items']//*[contains(text(),'" + activity + "')]/following::*[contains(text(), 'Turpināt')])[1]")));
+        SelenideElement priceElement = $(By.xpath("//section[@class='policy-items']//*[contains(text(),'" + activity + "')]/following-sibling::div[@class='price']/span[@class='num']"))
+                .shouldBe(Condition.visible, Duration.ofSeconds(10));
 
-        String priceText = priceElement.getText();
+        String priceText = priceElement.shouldNotBe(Condition.empty).getText();
 
         double priceValue = Double.parseDouble(priceText.replaceAll("[^\\d.]", ""));
         setPriceOfInsurance(priceValue);
 
+        SelenideElement continueButton = $(By.xpath("(//section[@class='policy-items']//*[contains(text(),'" + activity + "')]/following::*[contains(text(), 'Turpināt')])[1]"));
+        scrollToElement(continueButton);
     }
 
     public String getHeaderAddMoreProtectionText() {
