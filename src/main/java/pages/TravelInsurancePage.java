@@ -45,7 +45,7 @@ public class TravelInsurancePage extends BasePage {
         return changedDestinationTextField.getText();
     }
     public void clickActivityButton() {
-        clickOn(activityButton);    }
+        scrollToElement(activityButton);    }
 
     public void changeActivity(String activity) {
         clickOn($(By.xpath("//div[@class='wrapper single-popup-focus']//*[contains(text(),'" + activity + "')]")));
@@ -54,7 +54,7 @@ public class TravelInsurancePage extends BasePage {
         return getTextAndWaitTillElementVisible(activityTextField);
     }
     public void clickGetOfferButton() {
-        clickOn(getOfferButton);
+        scrollToElement(getOfferButton);
     }
 
 }
