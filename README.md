@@ -1,7 +1,7 @@
 
 ### Clone the repository
 ```
-git clone ----
+git clone https://github.com/ralfsgit/BTA_Automation_task.git
 ```
 
 ### Install maven dependencies
